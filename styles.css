@@ -1,0 +1,78 @@
+.carousel-container {
+    background: #bd9277;
+    background: radial-gradient(circle, rgba(189, 146, 119, 1) 0%, rgba(109, 57, 20, 1) 52%, rgba(45, 25, 16, 1) 100%);
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-stage {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* Estado base das xícaras */
+.product-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  opacity: 0;
+  visibility: hidden;
+  /* Removi o transform fixo daqui para o JS controlar a direção */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s;
+}
+
+/* ESTADO ATIVO: Sempre no centro e zerado */
+.product-card.active {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0deg) scale(1);
+}
+
+/* --- FLUXO NEXT (Avançar: Giro Horário 180deg) --- */
+
+/* Quem entra no Next, vem lá do -180deg para dar o efeito de continuidade */
+.product-card.enter-next {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotate(-180deg) scale(0.8);
+  transition: none; /* Sem transição para se posicionar instantaneamente atrás */
+}
+
+/* Quem sai no Next, vai para o 180deg */
+.product-card.exit-next {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotate(180deg) scale(0.8);
+}
+
+/* --- FLUXO PREV (Voltar: Giro Anti-Horário -180deg) --- */
+
+/* Quem entra no Prev, vem lá do 180deg */
+.product-card.enter-prev {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotate(180deg) scale(0.8);
+  transition: none; /* Sem transição para se posicionar instantaneamente atrás */
+}
+
+/* Quem sai no Prev, vai para o -180deg */
+.product-card.exit-prev {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotate(-180deg) scale(0.8);
+}
+
+.product-card img {
+    width: 500px;
+}
