@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuma Espresso</title>
+    <link rel="stylesheet" href="/static/styles/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header-transparente">
+        <nav class="nav-container">
+            
+            <ul class="menu-esquerdo">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+
+            <div class="logo-centro">
+                <img src="static/img/logo-transparente.png" alt="Kuma Espresso">
+            </div>
+
+            <div class="lado-direito-container">
+                <ul class="menu-direito">
+                    <li class="dropdown">
+                        <a href="#">Categorias <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Expressos</a></li>
+                            <li><a href="#">Lattes</a></li>
+                            <li><a href="#">Grãos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Catálogo</a></li>
+                </ul>
+
+                <div class="icones-usuario">
+                    <a href="#" title="Carrinho"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#" title="Login"><i class="fas fa-user-circle"></i></a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-esquerda">
+                <h3>Faça parte da nossa equipe</h3>
+                <button type="button">Junte-se a nós!</button>
+            </div>
+
+            <div class="footer-centro">
+                <img src="static/img/logo-transparente.png" alt="Kuma Espresso" class="logo-footer">
+                <p>@2026 todos direitos reservados</p>
+            </div>
+
+            <div class="footer-direita">
+                <h3>Contate-nos</h3>
+                <div class="bolinhas-sociais">
+                    <a href="#" title="Instagram"><i class="fas fa-instagram"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fas fa-whatsapp"></i></a>
+                    <a href="#" title="Telefone"><i class="fas fa-phone"></i></a>
+                    <a href="#" title="E-mail"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
