@@ -1,22 +1,68 @@
+{% extends "layout.html" %}
 
-<body>
-    <div class="carousel-container">
+    {% block conteudo %}
+    <link rel="stylesheet" href="../static/styles/carrossel.css">
+    <!-- Banner -->
+    <section class="carousel-container">
         <button class="nav-btn prev-btn">←</button>
 
         <div class="product-stage">
             <div class="product-card active">
-                <img src="./img/cafe-pingado.png" alt="Café Tradicional">
+                <img src="../static/img/cafe-pingado.png" alt="Café Tradicional">
             </div>
 
             <div class="product-card">
-                <img src="./img/cafe-gelado.png" alt="Café Caramelo">
+                <img src="../static/img/cafe-gelado.png" alt="Café Caramelo">
             </div>
 
             <div class="product-card">
-                <img src="./img/cafe-espresso.png" alt="Café Baunilha">
+                <img src="../static/img/cafe-espresso.png" alt="Café Baunilha">
             </div>
         </div>
         <div class="description-container"></div>
         <button class="nav-btn next-btn">→</button>
-    </div>
-</body>
+    </section>
+
+    <!-- Categorias -->
+    <section>
+        <h1>Destaques</h1>
+        <figure class="figure">
+            <img src="../static/img/Cafés - categoria_semfundo.png" class="figure-img" alt="Cafés">
+            <figcaption class="figure-caption">Cafés</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="../static/img/Bebidas doces - semfundo.png" class="figure-img" alt="Bebidas doces">
+            <figcaption class="figure-caption">Bebidas doces</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="../static/img/Especiais - semfundo.png" class="figure-img" alt="Especiais">
+            <figcaption class="figure-caption">Especiais</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="../static/img/Cafés - categoria_semfundo.png" class="figure-img" alt="Cafés">
+            <figcaption class="figure-caption">Doces</figcaption>
+        </figure>
+    </section>
+
+    <!-- Sobre a loja -->
+    <section>
+        <div class="infos-esquerda">
+            <h3>Info 1</h3>
+            <p>Bla bla bla</p>
+            <h3>Info 3</h3>
+            <p>Bla bla bla</p>
+        </div>
+        <img src="" alt="">
+        <div class="infos-direita">
+            <h3>Info 2</h3>
+            <p>Bla bla bla</p>
+            <h3>Info 4</h3>
+            <p>Bla bla bla</p>
+        </div>
+    </section>
+
+    <!-- Slogan -->
+    <section>
+        <h1>SLOGAN AQUI</h1>
+        <img src="" alt="">
+    </section>
