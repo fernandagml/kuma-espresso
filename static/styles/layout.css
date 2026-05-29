@@ -241,3 +241,8 @@ footer {
     background-color: #8B5A2B; 
     transform: translateY(-3px); 
 }
+
+
+img.logo-footer{
+    max-height: 150px;
+}
